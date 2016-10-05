@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Implementation-Title: Spring Boot AutoConfig :: ManageStorageAccount
+Implementation-Version: 1.0.0-beta2
+Built-By: gilisa
+Implementation-Vendor-Id: com.microsoft.azure
+Build-Jdk: 1.8.0_101
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+
