@@ -1,0 +1,4 @@
+azurestorage\AzureAutoConfig.class
+azurestorage\ManageStorageAccount.class
+azurestorage\Utils.class
+azurestorage\ManageStorageAccount$StorageManager.class

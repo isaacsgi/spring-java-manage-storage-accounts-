@@ -7,7 +7,7 @@
 	<version>1.0.0-beta2</version>
 	<name>Spring Boot AutoConfig :: ManageStorageAccount</name>
 	<description></description>
-	<url>https://github.com/Azure/storage-java-manage-storage-accounts</url>
+	<url>https://github.com/isaacsgi/spring-java-manage-storage-accounts</url>
 	
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -49,6 +49,15 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			<plugin> 
+                 <groupId>org.codehaus.mojo</groupId> 
+                 <artifactId>exec-maven-plugin</artifactId> 
+                 <version>1.4.0</version> 
+                 <configuration> 
+                     <mainClass>azurestorage.ManageStorageAccount</mainClass> 
+                     <cleanupDaemonThreads>false</cleanupDaemonThreads> 
+                 </configuration> 
+             </plugin> 
 		</plugins>
 	</build>
 		<repositories>
