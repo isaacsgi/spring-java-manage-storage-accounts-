@@ -1,14 +1,16 @@
 ---
 services: storage
 platforms: java
-author: selvasingh
+author: isaacsgi
+Based on: https://github.com/Azure-Samples/storage-java-manage-storage-accounts by selvasingh
 ---
 
 #Getting Started with Storage - Manage Storage Accounts - in Java #
 
-Storage Manage Storage Accounts Sample (for 1.0.0-beta2) - demonstrates how to perform common management tasks using the Microsoft Azure Storage service.
+This is a refactoring of Storage Manage Storage Accounts Sample (for 1.0.0-beta2 - https://github.com/Azure-Samples/storage-java-manage-storage-accounts ) 
+to utilize Spring Autowiring.
 
-
+This demonstrates how to perform common management tasks using the Microsoft Azure Storage service:
 - Create a storage account
 - Get or regenerate storage account access keys
 - Create another storage account
@@ -20,11 +22,23 @@ Storage Manage Storage Accounts Sample (for 1.0.0-beta2) - demonstrates how to p
 
 To run this sample:
 
-Set the environment variable `AZURE_AUTH_LOCATION` with the full path for an auth file. See [how to create an auth file](https://github.com/Azure/azure-sdk-for-java/blob/master/AUTH.md).
-
-    git clone https://github.com/Azure-Samples/storage-java-manage-storage-accounts.git
+    git clone https://github.com/Azure-Samples/spring-java-manage-storage-accounts.git
 
     cd storage-java-manage-storage-accounts
+    
+    In src/main/java/azurestorage/AzureAutoConfig.java, you have two Authorization options:
+    ApplicationTokenCredentials object; or
+    File object
+
+    To utilize the ApplictionTokenCredentials object, set these enviornment variables:
+    AZURE_AUTH_CLIENT_ID
+    AZURE_AUTH_DOM_TENANT
+    AZURE_AUTH_SECRET
+
+    To utilize a file object:
+    Set the environment variable AZURE_AUTH_LOCATION with the full path for an auth file. 
+    See [how to create an auth file](https://github.com/Azure/azure-sdk-for-java/blob/master/AUTH.md).
+
 
     mvn clean compile exec:java
 
